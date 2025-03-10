@@ -1,6 +1,9 @@
 import { useState } from 'react'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
+// Import assets
+import bollardImage from '../assets/images/bollard-image.jpg'
+import chargerImage from '../assets/images/charger.jpg'
 
 function OrderForm() {
   const [selectedProducts, setSelectedProducts] = useState([])
@@ -9,7 +12,7 @@ function OrderForm() {
     {
       id: 'bollard',
       name: 'EV Bollard Charger',
-      image: '/src/assets/images/bollard-image.jpg',
+      image: bollardImage,
       description: 'Elegant and robust bollard-style EV charger',
       specs: [
         'Up to 22kW output',
@@ -21,7 +24,7 @@ function OrderForm() {
     {
       id: 'pedestal',
       name: 'EV Pedestal Charger',
-      image: '/src/assets/images/charger.jpg',
+      image: chargerImage,
       description: 'Commercial-grade pedestal charging station',
       specs: [
         'Up to 22kW output',
@@ -33,7 +36,7 @@ function OrderForm() {
     {
       id: 'wallmount',
       name: 'Wall-mounted Charger',
-      image: '/src/assets/images/charger.jpg',
+      image: chargerImage,
       description: 'Space-saving wall-mounted charging solution',
       specs: [
         'Up to 22kW output',

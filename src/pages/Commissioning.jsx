@@ -1,5 +1,9 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+// Import assets
+import installationManual from '../assets/documents/installation-manual.pdf'
+import networkRequirements from '../assets/documents/network-requirements.pdf'
+import commissioningChecklist from '../assets/documents/commissioning-checklist.pdf'
 
 function Commissioning() {
   const [activeTab, setActiveTab] = useState('steps')
@@ -43,21 +47,21 @@ function Commissioning() {
   const documents = [
     {
       title: "Installation Manual",
-      description: "Complete installation guide with technical specifications",
+      description: "Complete installation guide for all products",
       icon: "📖",
-      link: "/src/assets/documents/installation-manual.pdf"
+      link: installationManual
     },
     {
       title: "Network Requirements",
       description: "Network setup and configuration guide",
       icon: "🌐",
-      link: "/src/assets/documents/network-requirements.pdf"
+      link: networkRequirements
     },
     {
       title: "Commissioning Checklist",
       description: "Detailed checklist for commissioning preparation",
       icon: "✓",
-      link: "/src/assets/documents/commissioning-checklist.pdf"
+      link: commissioningChecklist
     }
   ]
 

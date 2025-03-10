@@ -1,4 +1,10 @@
 import { useState } from 'react'
+// Import assets
+import flyerImage from '../assets/images/flyer.jpg'
+import placeholder1Image from '../assets/images/placeholder1.jpg'
+import placeholder2Image from '../assets/images/placeholder2.jpg'
+import bundleImage from '../assets/images/bundle-image.jpg'
+import salesDeck2024 from '../assets/documents/sales-deck-2024.pdf'
 
 function SalesMarketing() {
   const [activeTab, setActiveTab] = useState('overview')
@@ -33,17 +39,17 @@ function SalesMarketing() {
   const marketingMaterials = [
     {
       title: "Product Flyer",
-      image: "/src/assets/images/flyer.jpg",
+      image: flyerImage,
       description: "High-resolution product flyer for print and digital use"
     },
     {
       title: "Brand Guidelines",
-      image: "/src/assets/images/placeholder1.jpg",
+      image: placeholder1Image,
       description: "Official brand colors, logos, and usage guidelines"
     },
     {
       title: "Social Media Kit",
-      image: "/src/assets/images/placeholder2.jpg",
+      image: placeholder2Image,
       description: "Ready-to-use social media assets and templates"
     }
   ]
@@ -108,7 +114,7 @@ function SalesMarketing() {
             </div>
             <div className="card overflow-hidden">
               <img 
-                src="/src/assets/images/bundle-image.jpg" 
+                src={bundleImage} 
                 alt="Schön EV Charging Solutions" 
                 className="w-full h-auto object-cover rounded-lg"
               />
@@ -132,7 +138,7 @@ function SalesMarketing() {
             <div className="space-y-6">
               <h2 className="text-2xl font-semibold">Sales Deck 2024</h2>
               <iframe 
-                src="/src/assets/documents/sales-deck-2024.pdf" 
+                src={salesDeck2024} 
                 title="Sales Deck 2024"
                 className="w-full h-[700px] rounded-lg border border-gray-200"
               />

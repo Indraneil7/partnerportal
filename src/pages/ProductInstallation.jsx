@@ -1,4 +1,14 @@
 import { useState } from 'react'
+// Import assets
+import bollardImage from '../assets/images/bollard-image.jpg'
+import chargerImage from '../assets/images/charger.jpg'
+import bollardDimension from '../assets/images/bollard-dimension.png'
+import pedestalDimensions from '../assets/images/pedestal-dimensions.png'
+import chargerDimensions from '../assets/images/charger-dimensions.png'
+import specificationsBollard from '../assets/images/specifications-bollard.png'
+import productBrochure from '../assets/documents/product-brochure.pdf'
+import installationManual from '../assets/documents/installation-manual.pdf'
+import installationChecklist from '../assets/documents/installation-checklist.pdf'
 
 function ProductInstallation() {
   const [activeTab, setActiveTab] = useState('products')
@@ -6,21 +16,21 @@ function ProductInstallation() {
   const products = [
     {
       name: "EV Bollard Charger",
-      image: "/src/assets/images/bollard-image.jpg",
-      dimensions: "/src/assets/images/bollard-dimension.png",
-      specs: "/src/assets/images/specifications-bollard.png"
+      image: bollardImage,
+      dimensions: bollardDimension,
+      specs: specificationsBollard
     },
     {
       name: "EV Pedestal Charger",
-      image: "/src/assets/images/charger.jpg",
-      dimensions: "/src/assets/images/pedestal-dimensions.png",
-      specs: "/src/assets/images/specifications-bollard.png"
+      image: chargerImage,
+      dimensions: pedestalDimensions,
+      specs: specificationsBollard
     },
     {
       name: "Wall-mounted Charger",
-      image: "/src/assets/images/charger.jpg",
-      dimensions: "/src/assets/images/charger-dimensions.png",
-      specs: "/src/assets/images/specifications-bollard.png"
+      image: chargerImage,
+      dimensions: chargerDimensions,
+      specs: specificationsBollard
     }
   ]
 
@@ -28,12 +38,12 @@ function ProductInstallation() {
     {
       name: "Installation Manual",
       description: "Complete installation guide for all products",
-      link: "/assets/documents/installation-manual.pdf"
+      link: installationManual
     },
     {
       name: "Installation Checklist",
       description: "Pre and post installation checklist",
-      link: "/assets/documents/installation-checklist.pdf"
+      link: installationChecklist
     }
   ]
 
@@ -75,7 +85,7 @@ function ProductInstallation() {
                     <img src={product.specs} alt={`${product.name} Specifications`} className="w-full h-32 object-contain" />
                   </div>
                   <h3 className="text-xl font-semibold mb-4">{product.name}</h3>
-                  <a href="/src/assets/documents/product-brochure.pdf" 
+                  <a href={productBrochure} 
                      className="btn-secondary w-full text-center" 
                      download>
                     Download Specifications

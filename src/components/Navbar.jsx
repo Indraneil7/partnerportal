@@ -1,4 +1,5 @@
 import { Link, useLocation } from 'react-router-dom'
+import schonLogo from '../assets/images/schon-logo.svg'
 
 function Navbar() {
   const location = useLocation()
@@ -15,7 +16,7 @@ function Navbar() {
       <nav className="w-[90%] max-w-[1400px] mx-auto h-20 flex items-center justify-between">
         <Link to="/" className="h-10">
           <img 
-            src="/src/assets/images/schon-logo.svg" 
+            src={schonLogo} 
             alt="Schön Mobility" 
             className="h-full w-auto"
           />
