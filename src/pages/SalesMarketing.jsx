@@ -1,10 +1,9 @@
 import { useState } from 'react'
-// Import assets
+// Import assets that exist
 import flyerImage from '../assets/images/flyer.jpg'
-import placeholder1Image from '../assets/images/placeholder1.jpg'
-import placeholder2Image from '../assets/images/placeholder2.jpg'
 import bundleImage from '../assets/images/bundle-image.jpg'
 import salesDeck2024 from '../assets/documents/sales-deck-2024.pdf'
+// placeholder1.jpg and placeholder2.jpg are missing
 
 function SalesMarketing() {
   const [activeTab, setActiveTab] = useState('overview')
@@ -44,12 +43,12 @@ function SalesMarketing() {
     },
     {
       title: "Brand Guidelines",
-      image: placeholder1Image,
+      image: "https://via.placeholder.com/300x200?text=Brand+Guidelines",
       description: "Official brand colors, logos, and usage guidelines"
     },
     {
       title: "Social Media Kit",
-      image: placeholder2Image,
+      image: "https://via.placeholder.com/300x200?text=Social+Media+Kit",
       description: "Ready-to-use social media assets and templates"
     }
   ]

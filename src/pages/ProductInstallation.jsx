@@ -1,14 +1,13 @@
 import { useState } from 'react'
-// Import assets
+// Import assets that exist (based on your screenshot)
 import bollardImage from '../assets/images/bollard-image.jpg'
 import chargerImage from '../assets/images/charger.jpg'
 import bollardDimension from '../assets/images/bollard-dimension.png'
 import pedestalDimensions from '../assets/images/pedestal-dimensions.png'
 import chargerDimensions from '../assets/images/charger-dimensions.png'
 import specificationsBollard from '../assets/images/specifications-bollard.png'
-import productBrochure from '../assets/documents/product-brochure.pdf'
+import productBrochure from '../assets/documents/prodcut-brochure.pdf' // Note the typo in filename
 import installationManual from '../assets/documents/installation-manual.pdf'
-import installationChecklist from '../assets/documents/installation-checklist.pdf'
 
 function ProductInstallation() {
   const [activeTab, setActiveTab] = useState('products')
@@ -43,7 +42,7 @@ function ProductInstallation() {
     {
       name: "Installation Checklist",
       description: "Pre and post installation checklist",
-      link: installationChecklist
+      link: "#" // This file is missing, so use a placeholder link
     }
   ]
 
